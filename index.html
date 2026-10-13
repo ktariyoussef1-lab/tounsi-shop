@@ -1,63 +1,81 @@
-
+```html
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tounsi Shop</title>
+  <title>Tounsi Shop | Boutique en ligne</title>
   <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
 </head>
 <body>
-  <header>
-    <h1>Tounsi Shop</h1>
-    <p>Des produits utiles, au meilleur prix.</p>
-    <a href="#produits">Découvrir les produits</a>
+  <header class="header">
+    <a class="logo" href="#">🇹🇳 Tounsi<span>Shop</span></a>
+    <div class="search">
+      <input id="searchInput" type="search" placeholder="Chercher un produit...">
+      <button id="searchBtn">🔍</button>
+    </div>
+    <button class="cart-button" id="cartButton">
+      🛒 Panier <span id="cartCount">0</span>
+    </button>
   </header>
 
+  <nav class="categories" id="categories">
+    <button class="category active" data-category="Tous">Tous</button>
+    <button class="category" data-category="Informatique">Informatique</button>
+    <button class="category" data-category="Téléphones">Téléphones</button>
+    <button class="category" data-category="Électronique">Électronique</button>
+    <button class="category" data-category="Maison">Maison</button>
+    <button class="category" data-category="Cuisine">Cuisine</button>
+    <button class="category" data-category="Ménage">Ménage</button>
+    <button class="category" data-category="Accessoires">Accessoires</button>
+  </nav>
+
   <main>
-    <section id="produits">
-      <h2>Nos produits</h2>
-
-      <div class="produits">
-        <article class="produit">
-          <div class="emoji">🎧</div>
-          <h3>Écouteurs</h3>
-          <p>Écouteurs pour tous les jours.</p>
-          <strong>25 DT</strong>
-          <button onclick="ajouter(0)">Ajouter au panier</button>
-        </article>
-
-        <article class="produit">
-          <div class="emoji">📱</div>
-          <h3>Support téléphone</h3>
-          <p>Support pratique pour bureau.</p>
-          <strong>18 DT</strong>
-          <button onclick="ajouter(1)">Ajouter au panier</button>
-        </article>
-
-        <article class="produit">
-          <div class="emoji">🔌</div>
-          <h3>Câble USB-C</h3>
-          <p>Câble de recharge.</p>
-          <strong>12 DT</strong>
-          <button onclick="ajouter(2)">Ajouter au panier</button>
-        </article>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">BIENVENUE CHEZ TOUNSI SHOP</p>
+        <h1>Tout ce qu'il vous faut,<br><span>au même endroit.</span></h1>
+        <p>Découvrez nos catégories et trouvez les produits qui vous conviennent.</p>
+        <a href="#boutique" class="hero-link">Découvrir les produits ↓</a>
       </div>
+      <div class="hero-icon">🛍️</div>
     </section>
 
-    <section id="panier">
-      <h2>Mon panier</h2>
-      <ul id="liste-panier">
-        <li>Votre panier est vide.</li>
-      </ul>
-      <h3>Total : <span id="total">0</span> DT</h3>
-      <button id="commander" onclick="commanderWhatsApp()">
-        Commander sur WhatsApp
-      </button>
+    <section class="shop" id="boutique">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">NOTRE SÉLECTION</p>
+          <h2>Nos produits</h2>
+        </div>
+        <span id="productCount"></span>
+      </div>
+      <div class="products" id="productList"></div>
+      <p id="emptyMessage" class="empty hidden">Aucun produit trouvé.</p>
+    </section>
+
+    <section class="cart-section" id="panier">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">VOTRE SÉLECTION</p>
+          <h2>Mon panier</h2>
+        </div>
+      </div>
+      <div id="cartItems"></div>
+      <div class="cart-footer">
+        <strong>Total : <span id="cartTotal">0.00</span> DT</strong>
+        <button id="orderButton" class="primary-button">Commander sur WhatsApp</button>
+      </div>
+      <p class="hint">Le prix et la disponibilité doivent être confirmés avant la commande.</p>
     </section>
   </main>
 
-  <footer>© 2026 Tounsi Shop</footer>
+  <footer>
+    <a class="logo" href="#">🇹🇳 Tounsi<span>Shop</span></a>
+    <p>Votre boutique en ligne en Tunisie.</p>
+    <small>© <span id="year"></span> Tounsi Shop</small>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
+```
