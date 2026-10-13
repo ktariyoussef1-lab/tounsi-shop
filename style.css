@@ -1,0 +1,119 @@
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #20252d;
+  background: #f5f7fb;
+}
+
+header {
+  text-align: center;
+  padding: 55px 20px;
+  background: #142b49;
+  color: white;
+}
+
+header h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+header a {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 20px;
+  background: #f4bc50;
+  color: #142b49;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+main {
+  max-width: 1000px;
+  margin: auto;
+  padding: 25px 16px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.produits {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.produit {
+  background: white;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 4px 15px #0000000c;
+}
+
+.emoji {
+  font-size: 55px;
+  text-align: center;
+  padding: 10px;
+}
+
+.produit strong {
+  display: block;
+  margin: 15px 0;
+  font-size: 20px;
+  color: #16734a;
+}
+
+button {
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #16734a;
+  color: white;
+  font-weight: bold;
+}
+
+.produit button {
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+#panier {
+  margin-top: 35px;
+  padding: 22px;
+  border-radius: 14px;
+  background: white;
+}
+
+#liste-panier li {
+  margin: 12px 0;
+}
+
+#commander {
+  background: #168653;
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  color: #666;
+}
+
+@media (max-width: 500px) {
+  header h1 {
+    font-size: 32px;
+  }
+}

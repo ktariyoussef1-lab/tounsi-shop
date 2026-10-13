@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tounsi Shop</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Tounsi Shop</h1>
+    <p>Des produits utiles, au meilleur prix.</p>
+    <a href="#produits">Découvrir les produits</a>
+  </header>
+
+  <main>
+    <section id="produits">
+      <h2>Nos produits</h2>
+
+      <div class="produits">
+        <article class="produit">
+          <div class="emoji">🎧</div>
+          <h3>Écouteurs</h3>
+          <p>Écouteurs pour tous les jours.</p>
+          <strong>25 DT</strong>
+          <button onclick="ajouter(0)">Ajouter au panier</button>
+        </article>
+
+        <article class="produit">
+          <div class="emoji">📱</div>
+          <h3>Support téléphone</h3>
+          <p>Support pratique pour bureau.</p>
+          <strong>18 DT</strong>
+          <button onclick="ajouter(1)">Ajouter au panier</button>
+        </article>
+
+        <article class="produit">
+          <div class="emoji">🔌</div>
+          <h3>Câble USB-C</h3>
+          <p>Câble de recharge.</p>
+          <strong>12 DT</strong>
+          <button onclick="ajouter(2)">Ajouter au panier</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="panier">
+      <h2>Mon panier</h2>
+      <ul id="liste-panier">
+        <li>Votre panier est vide.</li>
+      </ul>
+      <h3>Total : <span id="total">0</span> DT</h3>
+      <button id="commander" onclick="commanderWhatsApp()">
+        Commander sur WhatsApp
+      </button>
+    </section>
+  </main>
+
+  <footer>© 2026 Tounsi Shop</footer>
+</body>
+</html>
